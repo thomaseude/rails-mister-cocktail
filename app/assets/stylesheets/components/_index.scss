@@ -3,3 +3,10 @@
 @import "avatar";
 @import "navbar";
 @import "card";
+@import "banner";
+@import "button";
+
+.row {
+  justify-content: center;
+  justify-content: space-between;
+}

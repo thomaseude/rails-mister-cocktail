@@ -1,18 +1,20 @@
-
-
-<div class="container">
-<h1>New cocktail</h1>
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.error_notification %>
-
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%#= f.association :ingredients, as: :check_boxes %>
-
-  <%= f.button :submit, class: "btn-primary" %>
-  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-<% end %> <br>
-<%= link_to "return to cocktails", root_path  %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path "barbackground_edxzcz", height: 400, width: 400, crop: :fill %>');">
+  <div class="container">
+    <h1>KEEP CALM AND ADD A COCKTAIL.</h1>
+    <p>By Mister Cocktail</p>
+  </div>
 </div>
 
+<div class="container">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.error_notification %>
+
+    <%= f.input :name, label: 'Name your cocktail 🍸' %>
+    <%= f.input :photo, as: :file, label: 'Choose an image 🍸' %>
+    <%#= f.association :ingredients, as: :check_boxes %>
+
+    <%= f.button :submit, class: "btn-warning" %>
+    <%= link_to "Cancel", root_path, class: "btn btn-outline-secondary" %>
+  <% end %>
+</div>
 
